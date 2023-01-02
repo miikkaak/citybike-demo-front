@@ -98,3 +98,7 @@ button:focus-visible {
   max-width: 50%;
   margin: 2rem;
 }
+
+.main-heading {
+  margin-top: 2rem;
+}

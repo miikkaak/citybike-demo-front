@@ -1,6 +1,11 @@
+import JourneysTable from "../components/tables/JourneysTable";
+
 const Journeys = () => {
     return (
-        <div>Hello World</div>
+        <div className="container">
+            <div className="main-heading">Journeys</div>
+            <JourneysTable/>
+        </div>
     )
 }
 

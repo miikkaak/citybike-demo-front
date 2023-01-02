@@ -1,0 +1,9 @@
+.datagrid {
+    min-height: 50vh;
+    padding: 1rem;
+}
+
+.table-container {
+    width: 100%;
+    margin: 1rem;
+}
