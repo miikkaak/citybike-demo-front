@@ -1,0 +1,28 @@
+.sidebar {
+    flex: 1 1 20%;
+    max-width: 20%;
+    background-color: #90ee90;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 3rem 1rem;
+    padding: 0;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+    transition: all .5s;
+}
+
+.links a:hover {
+    color: #4d5d53;
+}
