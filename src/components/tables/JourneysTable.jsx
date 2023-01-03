@@ -9,10 +9,10 @@ const JourneysTable = () => {
     const [rowsCount, setRowsCount] = useState(0);
 
     const columns = [
-        {field: "depStationName", headerName: "From", flex: 1, sortable: false, headerAlign: "left", minWidth: 200, headerClassName: "table-header"},
-        {field: "retStationName", headerName: "To", flex: 1, sortable: false, headerAlign: "left", minWidth: 200, headerClassName: "table-header"},
-        {field: "distance", headerName: "Distance (km)", flex: 1, sortable: false, headerAlign: "left", minWidth: 200, headerClassName: "table-header"},
-        {field: "duration", headerName: "Duration (minutes)", flex: 1, sortable: false, headerAlign: "left", minWidth: 200, headerClassName: "table-header"},
+        {field: "depStationName", headerName: "From", flex: 1, sortable: true, headerAlign: "left", minWidth: 200, headerClassName: "table-header"},
+        {field: "retStationName", headerName: "To", flex: 1, sortable: true, headerAlign: "left", minWidth: 200, headerClassName: "table-header"},
+        {field: "distance", headerName: "Distance (km)", flex: 1, sortable: true, headerAlign: "left", minWidth: 200, headerClassName: "table-header"},
+        {field: "duration", headerName: "Duration (minutes)", flex: 1, sortable: true, headerAlign: "left", minWidth: 200, headerClassName: "table-header"},
     ]
 
     useEffect(() => {

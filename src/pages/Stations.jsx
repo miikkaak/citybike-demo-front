@@ -1,6 +1,11 @@
+import StationsTable from "../components/tables/StationsTable";
+
 const Stations = () => {
     return (
-        <div>Hello World</div>
+        <div className="container">
+            <div className="main-heading">Stations</div>
+            <StationsTable/>
+        </div>
     )
 }
 
