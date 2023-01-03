@@ -26,3 +26,9 @@
 .links a:hover {
     color: #4d5d53;
 }
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none !important;
+    }
+}
