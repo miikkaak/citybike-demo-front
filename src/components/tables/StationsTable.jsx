@@ -91,7 +91,7 @@ const StationsTable = () => {
                 </div>
             </div>
             }  
-            {active=='single' && <SingleStation station={selectionModel}/>}
+            {active=='single' && <SingleStation station={selectionModel} setActive={setActive} setSelectionModel={setSelectionModel}/>}
             <div className="license">
                 Data provided by <a href="https://www.avoindata.fi/data/fi/dataset/hsl-n-kaupunkipyoraasemat">HSL</a>
             </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getJourneysFrom, getJourneysTo, getStation } from "../../api/api";
 
-const SingleStation = ({station}) => {
+const SingleStation = ({station, setActive, setSelectionModel}) => {
     const [info, setInfo] = useState(null);
     const [journeusFrom, setJourneusFrom] = useState([]);
     const [journeusTo, setJourneusTo] = useState([]);
@@ -46,19 +46,29 @@ const SingleStation = ({station}) => {
         })
     },[])
 
+    const returnToList = () => {
+        setSelectionModel([]);
+        setActive('grid');
+    }
+
     return (
-        <div className="container" style={{border: '1px solid #000', borderRadius: '12px'}}>
-            {info != null && 
-            <div>
-                <div className="main-heading">{`${info.nameFI}/${info.nameSWE}/${info.name}`}</div>
-                <div className="info-container">
-                    <div className="info">
-                        <div className="info-row"><strong>Address: </strong>{`${info.addressFI}/${info.addressSWE}`}</div>
-                        <div className="info-row"><strong>Journeys from the station: </strong>{`${journeusFrom.length} (Avg. distance of a journey: ${avgFrom} km)`}</div>
-                        <div className="info-row"><strong>Journeys to the station: </strong>{`${journeusTo.length} (Avg. distance of a journey: ${avgTo} km)`}</div>
+        <div>
+            <div className="container" style={{border: '1px solid #000', borderRadius: '12px'}}>
+                {info != null && 
+                <div>
+                    <div className="main-heading">{`${info.nameFI}/${info.nameSWE}/${info.name}`}</div>
+                    <div className="info-container">
+                        <div className="info">
+                            <div className="info-row"><strong>Address: </strong>{`${info.addressFI}/${info.addressSWE}`}</div>
+                            <div className="info-row"><strong>Journeys from the station: </strong>{`${journeusFrom.length} (Avg. distance of a journey: ${avgFrom} km)`}</div>
+                            <div className="info-row"><strong>Journeys to the station: </strong>{`${journeusTo.length} (Avg. distance of a journey: ${avgTo} km)`}</div>
+                        </div>
                     </div>
-                </div>
-            </div>}
+                </div>}
+            </div>
+            <div>
+                <button className="btn" onClick={returnToList}>Return</button>
+            </div>
         </div>
     )
 }
