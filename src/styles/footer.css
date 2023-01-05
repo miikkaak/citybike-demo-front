@@ -32,6 +32,19 @@
     text-decoration: none;
 }
 
+.title-size-medium {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.socials-row img {
+    margin-right: 15px;
+}
+
+.socials {
+    margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 768px) {
     .footer-container {
         flex-direction: column;
